@@ -35,6 +35,7 @@ Use this script to build the custom PHP binary. Make sure you have ``make autoco
 | --------------- | ----------------------------------- |
 | linux64         | ``-t linux64 -l -j4 -c -f x86_64``  |
 | mac64           | ``-t mac64 -l -j4 -c -f``           |
+| aarch (rpi)     | ``-t aarch -j4 -c -f``              |
 | android-aarch64 | ``-t android-aarch64 -x -s -j4 -f`` |
 
 

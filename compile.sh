@@ -246,7 +246,9 @@ elif [[ "$COMPILE_TARGET" == "mac" ]] || [[ "$COMPILE_TARGET" == "mac64" ]]; the
 	CXXFLAGS="$CXXFLAGS -stdlib=libc++"
 	OPENSSL_TARGET="darwin64-x86_64-cc"
 	echo "[INFO] Compiling for Intel MacOS x86_64"
-#TODO: add aarch64 platforms (ios, android, rpi)
+elif [[ "$COMPILE_TARGET" == "aarch64" ]] || [[ "$COMPILE_TARGET" == "aarch" ]]; then
+  echo "[INFO] Compiling for aarch"
+  GMP_ABI="64"
 elif [ -z "$CFLAGS" ]; then
 	if [ `getconf LONG_BIT` == "64" ]; then
 		echo "[INFO] Compiling for current machine using 64-bit"
